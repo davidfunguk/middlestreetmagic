@@ -11,6 +11,10 @@
             font-family: 'Montserrat', sans-serif; /* Primary font for body */
             color: #3d3d3d; /* Text color */
             background-color: #e8e8e8; /* Background color */
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 600px; /* Limit the size of the background image  */
             line-height: 1.6;
             margin: 20px; /* Add space around the outside */
             padding: 0;
@@ -27,26 +31,15 @@
 	    letter-spacing: -0.04em;
         }
 
-        h1 {            color: #947f57; /* Text color */
+        h1 {
             font-size: 96px; /* Increase size of main heading */
             text-align: center;
             margin: 20px auto; /* Center and add margin */
-  transition: 700ms ease;
-  font-variation-settings: "wght" 311;
-  margin-bottom: 0.8rem;
-  outline: none;
-  text-align: center;
 }
-
-h1:hover {
-  font-variation-settings: "wght" 582; 
-  letter-spacing: 1px;
-
-
-        }
 	
 	.blurb {
             font-weight:bold;
+            font-size: 18px;
             text-align: center;
 	}
 
@@ -96,8 +89,25 @@ ul li::before {
 }
 
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+img.performer {
+width:180px;
+}
 
+img.venue {
+width:400px;
+max-width:100%;
+}
+
+img.supporters {
+width:500px;
+max-width:100%;
+}
 
 /* Media Query for Desktop */
 @media (min-width: 768px) {
@@ -118,15 +128,16 @@ ul li::before {
 <!-- Event Details -->
 <section id="event-details">
     <h2>Event Details</h2>
-    <p>Join us for an enchanting evening of magic and community spirit in Beeston. Middle Street Magic is all about bringing people together in a fun, collaborative, and magical atmosphere. Prepare to be amazed as local magicians showcase their talents while we connect and celebrate our vibrant community.</p>
-    <p>The evening kicks off with close-up magic and interactive entertainment in the wonderful foyer cafe space. This is followed by an original show guaranteed to bring a novel experience of wonder.</p>
+    <p>Join us for an enchanting evening of magic and community spirit in Beeston.</p>
+<p>Middle Street Magic is all about bringing people together in a fun, collaborative, and magical atmosphere. Prepare to be amazed as local magicians showcase their talents while we connect and celebrate our vibrant community.</p>
+    <p>The evening kicks off with close-up magic and interactive entertainment in the wonderful foyer cafe space at Middle Street Resource Centre. This is followed by an original show guaranteed to bring you a novel experience of wonder.</p>
    <ul>
         <li>June 21 & 22 (Fri & Sat).</li>
         <li>Doors open at 18:15 (for pre-show hot/soft drinks and entertainment).</li>
         <li>Show at 19:00 (75min approx running time, no interval).</li>
         <li>Middle Street Resource Centre Beeston, Nottingham NG9 2AR.</li>
     </ul>
-    <p>Come join us as we create unforgettable moments and forge new connections - Middle Street Magic promises to be an evening of wonder and camaraderie you won't want to miss!</p>
+    <p>Come and join us as we create unforgettable moments and forge new connections - Middle Street Magic promises to be an evening of wonder and camaraderie you won't want to miss!</p>
 </section>
 
 <!-- Tickets -->
@@ -145,17 +156,25 @@ ul li::before {
 >
 </stripe-buy-button>
 
+<stripe-buy-button
+  buy-button-id="buy_btn_1PEdVPKi2NR2LZwkcfKdZzBK"
+  publishable-key="pk_live_51PCjneKi2NR2LZwk6ixfJ3l5X8aLAj24bFFSzGJMraxVEAMxK91HkPpgaBtMWumtHfQE64Wns4nWsguTjB0299aj00TtSMb6dC"
+>
+</stripe-buy-button>
+
     <p>Please <a href="mailto:david@magicwonderart.com,contact@andrewstannardmagic.co.uk">let us know of any accessibility requirements</a> so that we can ensure everyone feels welcome.</p>
 </section>
 
 <!-- Performers -->
 <section id="performers">
     <h2>Performers</h2>
-    <p>Your hosts for the evening are Andrew Stannard and David Fung. They are local magicians, members of The Magic Circle, and both dedicated to sharing the wonderful world of magic with the community.</p>
+    <p>Your hosts for the evening are <a href="https://andrewstannardmagic.co.uk/" target="_blank">Andrew Stannard</a> and <a href="https://davidfung.co.uk/" target="_blank">David Fung</a>. They are local magicians, members of The Magic Circle, and both dedicated to sharing the wonderful world of magic with the community.</p>
     <p>They are joined by friends from the local magical community, all helping to share the magic and excitement. We'll all ensure you feel welcome, and enjoy a unique evening of magic and community.</p>
+<img src="andrew-stannard.jpg" class="performer">
     <h3>Andrew Stannard</h3>
     <p>Bringing an intellectual touch to the world of magic and comedy. From his background in programming, his obsession with board games and his charmingly quick wit, Andrew will leave you baffled and laughing in equal measure.</p>
-    <h3>David Fung</h3>
+   <img src="david-fung.jpg" class="performer">
+ <h3>David Fung</h3>
     <p>A lifelong student and performer of the art of magic, David brings a collection of polished routines and showmanship to his performances, whether in up-close magic or on the stage. Having performed at a wide range of occasions from corporate events to children’s parties and everything in between, you're sure to be thoroughly entertained when David enters the room.</p>
 
 </section>
@@ -164,8 +183,8 @@ ul li::before {
 <section id="venue">
     <h2>Venue</h2>
     <p>Middle Street Resource Centre is a mental health focused community centre based in Beeston which offers a variety of mental health support groups, therapeutic one to one support, and volunteering opportunities to promote mental health wellbeing.</p>
-    <img src="msrc.webp">
-	<p>At the heart of the centre is a community café which provides a welcoming space for all.</p>
+    <img src="msrc.webp" class="venue">
+    <p>At the heart of the centre is a community café which provides a welcoming space for all.</p>
     <p>We're so pleased to be able to use this space to bring this event to life, to share magic here and connect the community. The energy and community spirit felt in the building is inspiring and we are sure you will feel this too. The welcoming atmosphere perfectly complements the magic and camaraderie of the event.</p>
 <h3>The Magical Experience</h3>
     <p>Our evening of magic will begin in the bright and open cafe which will act as our foyer and welcome space. The cafe will be open to purchase hot and soft drinks, and you'll be entertained with close-up experiences of magic and mystery.</p>
@@ -193,16 +212,18 @@ ul li::before {
     <p>Thank you!</p>
     <p>Middle Street Magic would not be possible without the support of many friends leading up to and during the event - including you as guests and participants in the evening of magic. The following three organisations have also provided significant contribution to make it happen:</p>
     <ul>
-        <li>Middle Street Resource Centre: A mental health-focused community center based in Beeston which offers a variety of mental health support groups, therapeutic one to one support, and volunteering opportunities to promote mental health wellbeing. The support from MSRC in holding the event in their space cannot be understated, and we are very happy to be able to support and platform the center by doing so.</li>
-        <li>The Curious Cabaret: Hosts live magic events, showcasing the best talent from around the world. Their technical and production advice and resources are invaluable and hugely appreciated.</li>
-        <li>The Agency of Wonder: Dedicated to experiences of the weird, the wonderful and the marvelous. Middle Street Magic is not just a show, but an experience, and it is made all the better for The Agency of Wonder's creative input on the unique magical experience.</li>
+        <li><a href="https://msrc.org.uk/" target="_blank">Middle Street Resource Centre</a>: A mental health-focused community centre based in Beeston which offers a variety of mental health support groups, therapeutic one to one support, and volunteering opportunities to promote mental health wellbeing. The support from MSRC in holding the event in their space cannot be understated, and we are very happy to be able to support and platform the centre by doing so.</li>
+        <li><a href="https://www.facebook.com/thecuriouscabaret" target="_blank">The Curious Cabaret</a>: Hosts live magic events, showcasing the best talent from around the world. Their technical and production advice and resources are invaluable and hugely appreciated.</li>
+        <li><a href="https://www.agencyofwonder.com" target="_blank">The Agency of Wonder</a>: Dedicated to experiences of the weird, the wonderful and the marvelous. Middle Street Magic is not just a show, but an experience, and it is made all the better for The Agency of Wonder's creative input on the unique magical experience.</li>
     </ul>
+<img src="supporters.jpg" class="supporters">
 </section>
 
 <!-- Share -->
 <section id="share">
     <h2>Share the Magic</h2>
-    <p>Join us in spreading the magic! Share news about Middle Street Magic with your friends, family, and neighbors, and let's make this enchanting event one to remember. We can't wait to join you to weave a tapestry of wonder in the spirit of 'community connection through magic' together. <a href="#tickets">Get your tickets now</a> and we'll see you there!</p>
+    <p>Join us in spreading the magic!</p>
+<p>Share news about Middle Street Magic with your friends, family, and neighbors, and let's make this enchanting event one to remember. We can't wait to join you to weave a tapestry of wonder in the spirit of 'community connection through magic' together. <a href="#tickets">Get your tickets now</a> and we'll see you there!</p>
 <ul>
 <li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.magicwonderart.com" target="_blank">Share on Facebook</a></li>
 <li><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.magicwonderart.com" target="_blank">Share on Twitter</a></li>
@@ -213,7 +234,7 @@ ul li::before {
 <section id="footer">
 <hr>
 <p>
-Middle Street Magic is a not-for-profit project founded by local magicians Andrew Stannard and David Fung. For any more information and queries, please <a href="mailto:david@magicwonderart.com,contact@andrewstannardmagic.co.uk">email us!</a>
+Middle Street Magic is a not-for-profit project founded by local magicians Andrew Stannard and David Fung. For any more information and queries, please <a href="mailto:david@magicwonderart.com,contact@andrewstannardmagic.co.uk">email us</a>!
 </p>
 </section>
 
